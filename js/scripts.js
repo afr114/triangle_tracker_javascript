@@ -20,3 +20,19 @@ var triangleTracker = function(sideA, sideB, sideC) {
     return "That is a scalene triangle."
   };
 };
+
+$(document).ready(function() {
+  $("form#triangles").submit(function(event){
+
+    var sideA = parseInt($("input#sideA").val());
+    var sideB = parseInt($("input#sideB").val());
+    var sideC = parseInt($("input#sideC").val());
+    var result = triangleTracker(sideA, sideB, sideC);
+
+    $(".triangle-result").text(result);
+
+    $("#result").show();
+    event.preventDefault();
+
+  });
+});

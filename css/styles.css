@@ -1,0 +1,23 @@
+#result {
+  display: none;
+}
+
+.main {
+  align:center;
+}
+
+
+#triangles input {
+  max-width: 50%;
+  text-align:center;
+}
+
+#triangles button {
+  margin-top: 5%;
+  height: 50px;
+  width: 30%;
+}
+
+h3 {
+  margin-bottom: 2%;
+}
