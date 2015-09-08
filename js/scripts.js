@@ -1,3 +1,22 @@
 var isTriangle = function(sideA, sideB, sideC) {
-  return false;
+  var sides = [sideA, sideB, sideC];
+  var sortedSides = sides.sort(function(a,b) {return a-b})
+  if (sortedSides[0] + sortedSides[1] > sortedSides[2]) {
+    return true
+  } else {
+    return false
+  };
+
+};
+
+var triangleTracker = function(sideA, sideB, sideC) {
+  if (isTriangle(sideA, sideB, sideC) === false) {
+    return "That is not a triangle."
+  } else if ((sideA === sideB) && (sideB === sideC)) {
+    return "That is an equilateral triangle."
+  } else if ((sideA === sideB) || (sideB === sideC) || (sideA === sideC)) {
+    return "That is an isoceles triangle."
+  } else {
+    return "That is a scalene triangle."
+  };
 };
